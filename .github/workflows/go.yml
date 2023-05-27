@@ -45,13 +45,15 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build
       run: go build -v main.go
-    - name: Upload GitHub Pages artifact
-      uses: actions/upload-pages-artifact@v1.0.8
+      
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.0
       with:
-        # Artifact name
+    # Artifact name
         name: programa
-        # Path of the directory containing the static assets.
+    # A file, directory or wildcard pattern that describes what to upload
         path: main
+
 
   docker:
     needs: build
