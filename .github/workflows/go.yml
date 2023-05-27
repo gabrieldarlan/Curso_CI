@@ -9,8 +9,8 @@ on:
 jobs:
 
   test:
-    runs-on:  ${{ matrix.os }}
-    env: 
+    runs-on: ${{ matrix.os }}
+    env:
       HOST: localhost
       PORT: 5432
       USER: root
